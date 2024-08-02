@@ -1,8 +1,8 @@
 import cv2
 
-harcascade = "model/haarcascade_russian_plate_number.xml"
+harcascade = "Car-Number-Plates-Detection\model\haarcascade_russian_plate_number.xml"
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("http://192.168.29.207:4747/video")
 
 cap.set(3, 640) # width
 cap.set(4, 480) #height
@@ -39,4 +39,5 @@ while True:
         cv2.imshow("Results",img)
         cv2.waitKey(500)
         count += 1
+
 
